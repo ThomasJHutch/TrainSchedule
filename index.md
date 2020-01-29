@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- boostrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <!-- moment js -->
+    <script scr="https://cdn.jsdeliver.net/moment.js/2.24.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron" style="background-color: red; color: white">
+            <h1 Class="text-center">Train Time!</h1>
+            <h3 class="text-center">Whoot Whoot</h3>
+        </div>
+
+        <div class="row">
+            <div class=col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel1-heading">
+                        <h3 class="panel-title"><strong>CURRENT TRAIN SCHEDULE</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover" id="trainTable">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency</th>
+                                    <th>Next arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- empty for now -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel1-heading">
+                        <h3 class="panel-title"><strong>ADD Train</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="">Train Name</label>
+                                <input type="text" class="form-control" id="trainNameInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Destination</label>
+                                <input type="text" class="form-control" id="destinationInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">First Train Time (HH:mm - Military Time)</label>
+                                <input type="text" class="form-control" id="firstTrainInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Frequency (Min)</label>
+                                <input type="text" class="form-control" id="frequencyInput">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit!</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="code.js"></script>
+</body>
+
+</html>
